@@ -865,10 +865,10 @@ cusdis:
 # Based on GitHub Discussions, similar to Utterances
 # See: https://giscus.app/
 giscus:
-  repo: gi-b716/gi-b716.github.io
-  repo-id: R_kgDOMZNsUQ
+  repo: gi-b716/Blog-source
+  repo-id: R_kgDOM5lUNQ
   category: Giscus
-  category-id: DIC_kwDOMZNsUc4ChFEy
+  category-id: DIC_kwDOM5lUNc4Ci9LR
   theme-light: light
   theme-dark: dark_dimmed
   mapping: pathname
@@ -876,6 +876,7 @@ giscus:
   emit-metadata: 0
   input-position: top
   lang: zh-CN
+  loading: lazy
 
 # Discuss
 # 多平台、多数据库、自托管、免费开源评论系统
