@@ -1,7 +1,8 @@
 ---
 title: 浅谈如何搭建Hexo博客
 date: 2024-07-22 22:04:53
-category: 科技
+categories:
+  - 科技
 ---
 
 ## 前言
