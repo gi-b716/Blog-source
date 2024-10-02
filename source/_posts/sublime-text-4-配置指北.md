@@ -25,7 +25,13 @@ Sublime Text 是一款轻量化编辑器，本篇文章将手把手教你使用 
 
 （可选）安装 `ayu` 及 `A File Icon` 美化 Sublime。
 
+安装 `AdvancedNewFile` 以获得增强的新建文件功能。
+
 安装 `BracketHighlighter` 获得括号高亮显示。
+
+安装 `Clickable URLs` 以获得可点击的 URL。
+
+安装 `Compare Side-By-Side` 以对比两个文件。
 
 安装 `ConvertToUTF8` 以应对不同编码的文件。
 
@@ -33,6 +39,25 @@ Sublime Text 是一款轻量化编辑器，本篇文章将手把手教你使用 
 
 安装 `SyncedSideBar` 使切换文件时同步侧边栏。
 
-安装 `Terminus` 以获得一个内嵌终端。（注意：该插件与 clink 不兼容，若你的cmd）
+安装 `Terminus` 以获得一个内嵌终端。（注意：该插件与 clink 不兼容，若你的 cmd 注入了 clink，后续有教程解决相关问题。）
 
-TODO。。。
+（可选）安装 `Toggle the View Read-Only` 让一个文件变得只读。
+
+安装 `TrailingSpaces` 显示多出来的空格。
+
+# Part. 3 配置 C++ 环境
+
+首先安装 C++ 环境，由于 Sublime Text 的自动补全需要 Clangd，所以使用 Mingw 的用户也需要按照这一步操作。我们使用 MSYS2 安装所需的 C++ 环境。
+
+打开 [MSYS2 官网](https://www.msys2.org/)，下载并安装。如果安装过程卡在了 50%，请尝试断网后重新安装。
+
+安装完成以后，打开 MSYS2，输入 `pacman -Su` 更新软件包。若更新缓慢，可以在 `C:\msys64\etc\pacman.d` 下设置镜像。在此期间 MSYS2 提示你输入 `y` 之后会关闭，重新打开再输入一遍` pacman -Su` 即可。
+
+接下来，使用
+```
+pacman -S mingw64/mingw-w64-x86_64-make mingw64/mingw-w64-x86_64-gdb mingw64/mingw-w64-x86_64-clang
+pacman -S mingw64/mingw-w64-x86_64-clang-tools-extra
+```
+完成剩余的安装，并将 `C:\msys64\mingw64\bin` 添加至 path 中。请保证你的 Python 环境位于此条上面，不然 MSYS2 会覆盖你已有的 Python 环境。
+
+回到 Sublime，我们安装 `LSP` 及 `LSP-clangd` 获得 C++ 补全支持，你也可自行安装其他语言的补全支持，均已 `LSP-` 开头，部分需要 `Node.js`。
