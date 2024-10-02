@@ -60,4 +60,6 @@ pacman -S mingw64/mingw-w64-x86_64-clang-tools-extra
 ```
 完成剩余的安装，并将 `C:\msys64\mingw64\bin` 添加至 path 中。请保证你的 Python 环境位于此条上面，不然 MSYS2 会覆盖你已有的 Python 环境。
 
-回到 Sublime，我们安装 `LSP` 及 `LSP-clangd` 获得 C++ 补全支持，你也可自行安装其他语言的补全支持，均已 `LSP-` 开头，部分需要 `Node.js`。
+回到 Sublime，我们安装 `LSP` 及 `LSP-clangd` 获得 C++ 补全支持，你也可自行安装其他语言的补全支持，均已 `LSP-` 开头，部分需要 `Node.js`。安装 `SublimeLinter` 及 `SublimeLinter-gcc` 获取一些错误提示。安装 `CppFastOlympicCoding` 一键测试数据，使用过 VSCode 的 cph 插件应该对此很熟悉。可选的是，安装 `SublimeAStyleFormatter` 来格式化你的码风。
+
+接下来，我们将安装一系列来自 [tiger2005](https://www.luogu.com.cn/user/60864) 大佬的插件。
